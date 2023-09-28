@@ -13,15 +13,25 @@ import "fmt"
 // I wouldn't normally recommend this, but did
 // it here to make life easier for beginners.
 func FizzBuzz(n int) {
-	switch {
-	case n%3 == 0 && n%5 == 0:
-		fmt.Printf("Fizz Buzz\n")
-	case n%3 == 0:
-		fmt.Printf("Fizz\n")
-	case n%5 == 0:
-		fmt.Printf("Buzz\n")
-	default:
-		fmt.Print(n, "\n")
+	for i := 1; i < n; i++ {
+		if i%3 == 0 {
+			fmt.Print("Fizz, ")
+		} else if i%5 == 0 {
+			fmt.Print("Buzz,")
+		} else if i%3 == 0 && i%5 == 0 {
+			fmt.Print("Fizz Buzz, ")
+		} else {
+			fmt.Print(i, ", ")
+		}
 	}
-
+	if n%3 == 0 {
+		fmt.Print("Fizz")
+	} else if n%5 == 0 {
+		fmt.Print("Buzz")
+	} else if n%3 == 0 && n%5 == 0 {
+		fmt.Print("Fizz Buzz")
+	} else {
+		fmt.Print(n)
+	}
+	fmt.Println()
 }
