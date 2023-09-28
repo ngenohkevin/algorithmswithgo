@@ -15,11 +15,13 @@ import "fmt"
 func FizzBuzz(n int) {
 	switch {
 	case n%3 == 0 && n%5 == 0:
-		fmt.Println("Fizz Buzz")
+		fmt.Printf("Fizz Buzz\n")
 	case n%3 == 0:
-		fmt.Println("Fizz")
+		fmt.Printf("Fizz\n")
 	case n%5 == 0:
-		fmt.Println("Buzz")
+		fmt.Printf("Buzz\n")
+	default:
+		fmt.Print(n, "\n")
 	}
 
 }
