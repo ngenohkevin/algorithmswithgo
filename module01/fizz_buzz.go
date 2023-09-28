@@ -14,24 +14,21 @@ import "fmt"
 // it here to make life easier for beginners.
 func FizzBuzz(n int) {
 	for i := 1; i < n; i++ {
-		if i%3 == 0 {
-			fmt.Print("Fizz, ")
-		} else if i%5 == 0 {
-			fmt.Print("Buzz,")
-		} else if i%3 == 0 && i%5 == 0 {
-			fmt.Print("Fizz Buzz, ")
-		} else {
-			fmt.Print(i, ", ")
-		}
+		printFizzBuzz(i)
+		fmt.Print(", ")
 	}
-	if n%3 == 0 {
+	printFizzBuzz(n)
+	fmt.Println()
+}
+
+func printFizzBuzz(n int) {
+	if n%3 == 0 && n%5 == 0 {
+		fmt.Print("Fizz Buzz")
+	} else if n%3 == 0 {
 		fmt.Print("Fizz")
 	} else if n%5 == 0 {
 		fmt.Print("Buzz")
-	} else if n%3 == 0 && n%5 == 0 {
-		fmt.Print("Fizz Buzz")
 	} else {
 		fmt.Print(n)
 	}
-	fmt.Println()
 }
