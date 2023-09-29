@@ -24,7 +24,7 @@ func FizzBuzz(n int) {
 		default:
 			fmt.Print(i)
 		}
-		if i == n {
+		if i != n {
 			fmt.Print(", ")
 		}
 	}
