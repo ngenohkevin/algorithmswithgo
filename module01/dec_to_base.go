@@ -19,6 +19,6 @@ func DecToBase(dec, base int) string {
 		res = string(charset[rem]) + res
 		dec = dec / base
 	}
-
+// return a string
 	return res
 }
