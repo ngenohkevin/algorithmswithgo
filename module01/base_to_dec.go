@@ -15,7 +15,17 @@ func BaseToDec(value string, base int) int {
 	multiplier := 1
 
 	for i := len(value) - 1; i >= 0; i-- {
-
+		index := -1
+		for j, char := range charset {
+			if char == rune(value[i]) {
+				index = j
+				break
+			}
+		}
+		if index < 0 {
+			panic("something went wrong")
+		}
+		res = res + index*multiplier
 	}
 
 	return 0
