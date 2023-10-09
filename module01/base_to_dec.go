@@ -29,5 +29,5 @@ func BaseToDec(value string, base int) int {
 		multiplier = multiplier * base
 	}
 
-	return 0
+	return res
 }
