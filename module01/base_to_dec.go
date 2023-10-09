@@ -5,9 +5,18 @@ package module01
 //
 // Eg:
 //
-//   BaseToDec("E", 16) => 14
-//   BaseToDec("1110", 2) => 14
-//
+//	BaseToDec("E", 16) => 14
+//	BaseToDec("1110", 2) => 14
 func BaseToDec(value string, base int) int {
+
+	var res int
+
+	const charset = "0123456789ABCDEF"
+	multiplier := 1
+
+	for i := len(value) - 1; i >= 0; i-- {
+
+	}
+
 	return 0
 }
