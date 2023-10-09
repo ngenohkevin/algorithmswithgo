@@ -26,6 +26,7 @@ func BaseToDec(value string, base int) int {
 			panic("something went wrong")
 		}
 		res = res + index*multiplier
+		multiplier = multiplier * base
 	}
 
 	return 0
